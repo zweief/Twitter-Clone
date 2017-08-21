@@ -2,7 +2,8 @@
 <html>
   <head>
     <%# '<%=' führt function aus und fügt Ergebnis in template ein  %>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <%# full_title ist eigener helper, siehe app/helpers/application_helper %>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
